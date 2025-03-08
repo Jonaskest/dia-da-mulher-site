@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Dia da Mulher!</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #ffe4e1;
+        }
+        h1 {
+            color: #d63384;
+        }
+        .button-container {
+            margin-top: 20px;
+        }
+        button {
+            font-size: 18px;
+            padding: 10px 20px;
+            margin: 10px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        #sim {
+            background-color: #28a745;
+            color: white;
+        }
+        #nao {
+            background-color: #dc3545;
+            color: white;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Ei, você! Sim, você mesmo! Tenho uma pergunta MUITO importante...</h1>
+    <p><strong>"Você aceita NÃO receber meus parabéns pelo Dia da Mulher?"</strong> 😏</p>
+    <p>(Escolha com sabedoria... 😈)</p>
+    
+    <div class="button-container">
+        <button id="sim" onclick="mostrarMensagem()">Sim</button>
+        <button id="nao" onmouseover="fugir()">Não</button>
+    </div>
+    
+    <script>
+        function mostrarMensagem() {
+            alert("Hahahah! Eu sabia que você ia acabar aceitando! Feliz Dia da Mulher! 💖✨");
+        }
+        
+        function fugir() {
+            let x = Math.random() * (window.innerWidth - 100);
+            let y = Math.random() * (window.innerHeight - 100);
+            document.getElementById("nao").style.left = `${x}px`;
+            document.getElementById("nao").style.top = `${y}px`;
+        }
+    </script>
+</body>
+</html>
